@@ -1,0 +1,17 @@
+header {
+  border: black 2px solid;
+}
+.main {
+  border: black 2px solid;
+  display: flex;
+
+  flex-direction: row;
+}
+.container {
+  border: black 2px solid;
+  width: 50%;
+  display: flex;
+}
+img {
+  width: 100%;
+}
