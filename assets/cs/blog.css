@@ -1,0 +1,14 @@
+body {
+  background-color: antiquewhite;
+  color: black;
+}
+
+.dark {
+  background-color: darkolivegreen;
+}
+
+.light {
+  background-color: antiquewhite;
+  color: black;
+
+}
