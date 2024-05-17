@@ -1,17 +1,19 @@
-header {
-  border: black 2px solid;
-}
-.main {
-  border: black 2px solid;
-  display: flex;
+/* Default style of page */
 
-  flex-direction: row;
+body {
+  background-color: antiquewhite;
+  color: black;
 }
-.container {
-  border: black 2px solid;
-  width: 50%;
-  display: flex;
+/* Light Mode */
+
+.light {
+  background-color: antiquewhite;
+  color: black;
 }
-img {
-  width: 100%;
+
+/* Dark Mode */
+.dark {
+  background-color: darkolivegreen;
+  color: white;
 }
+  

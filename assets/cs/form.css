@@ -1,3 +1,19 @@
+/* creating styles for the form container */
+
+#form-container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  flex-direction: column;
+}
+
+h2 {
+text-align: center;
+width: 100%;
+padding-top: 5%;
+font-size: 120%;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -7,14 +23,20 @@ form {
   padding: 5%;
 }
 
-form h1 {
-text-align: center;
+
+form li  {
+  padding-bottom: 5%;
 }
-form div  {
-  border: black 2px solid;
-  gap: 5%;
+label {
+  line-height: 2;
+  font-size: 90%;
 }
 
 input {
   width: 100%;
+}
+
+#blog-content {
+  width: 100%;
+  min-height: 5rem;
 }

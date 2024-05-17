@@ -14,7 +14,7 @@
   inputs for username, blog title, and blog content.
   <header>
     <!-- //Enter toggle for dark/light mode// -->
-    <button>
+    <button id="toggle-button">
       &#x2600; &#127769;
     </button>
   </header>
@@ -23,25 +23,27 @@
       <img src="./assets/images/blog-image.jpg">
     </div>
     <div class = "container" id = "form-container">
-      <form>
-        <h1>
+        <h2>
           What's on Your Mind?
-        </h1>
-        <div>
-          <label>Username: </label>
-          <input type="text" name="userName" />
-        </div>
-        <div>
-          <label>Blog Title: </label>
-          <input type="text" name="blogTitle" />
-        </div>
-        <div>
-          <label>Blog Content: </label>
-          <input type="text" name="blogContent" />
-        </div>
-        <div>
-          <button>Submit</button>
-        </div>
+        </h2>      
+        <form>
+          <ul>
+            <li>
+              <label>Username: </label>
+              <input type="text" name="userName" />
+            </li>
+
+            <li>
+              <label>Blog Title: </label>
+              <input type="text" name="blogTitle" />
+            </li>
+
+            <li>
+              <label for="content">Blog Content: </label>
+              <textarea id="blog-content" name="blogContent"></textarea>
+            <li>
+             <button  class="submit-button">Submit</button>
+          </ul>
       </form>
     </div>
   
