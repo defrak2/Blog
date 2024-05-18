@@ -26,24 +26,18 @@
         <h2>
           What's on Your Mind?
         </h2>      
-        <form>
-          <ul>
-            <li>
-              <label>Username: </label>
-              <input type="text" name="userName" />
-            </li>
-
-            <li>
-              <label>Blog Title: </label>
-              <input type="text" name="blogTitle" />
-            </li>
-
-            <li>
-              <label for="content">Blog Content: </label>
-              <textarea id="blog-content" name="blogContent"></textarea>
-            <li>
-             <button  class="submit-button">Submit</button>
-          </ul>
+        <form id="post-form">
+              <label for="user-name">Username: 
+                <input type="text" id="user-name" class="post-text"/>
+              </label>
+              <label for="blog-title">Blog Title: 
+                <input type="text" id="blog-title" class="post-text" />
+              </label>
+              <label for="blog-content">Blog Content: 
+                <textarea id="blog-content" id="blog-content" class="post-text"></textarea>
+              </label>
+             <button  id="submit-button">Submit</button>
+          <ul id="posts"></ul>
       </form>
     </div>
   
@@ -51,8 +45,9 @@
   <footer>
       Kendra DeFrancisco
   </footer>
+  <script src="./assets/js/logic.js"></script>
     <script src="./assets/js/blog.js"></script>
     <script src="./assets/js/form.js"></script>
-    <script src="./assets/js/logic.js"></script>
+
 </body>
 </html>
