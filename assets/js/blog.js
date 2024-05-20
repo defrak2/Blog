@@ -2,9 +2,9 @@ const postCount= document.querySelector('#post-count');
 const postList= document.querySelector('#posts');
 const submitButton= document.querySelector('#submit-button');
 const postInput= document.querySelector('.post-text');
-const userName= document.querySelector('#user-name');
-const blogTitle= document.querySelector('#blog-title');
-const blogContent= document.querySelector('#blog-content');
+// const userName= document.querySelector('#user-name');
+// const blogTitle= document.querySelector('#blog-title');
+// const blogContent= document.querySelector('#blog-content');
 
 let blogPosts = [];
 
@@ -22,14 +22,39 @@ function renderPosts() {
   postList.innerHTML = '';
   postCount.textContent = blogPosts.length;
 
+for(let i = 0; i < blogPosts.length; i++) {
+  const post= blogPosts[i];
 
-  const lastPost = JSON.parse(localStorage.getItem('currentPost'));
+  const blogPost = document.createElement('div');
+  blogPost.textContent = '';
+  blogPost.setAttribute('data-index', i);
 
-if(lastPost !== null) {
-  document.getElementById('saved-name').innerHTML = lastPost.userName;
-  document.getElementById('saved-title').innerHTML = lastPost.blogTitle;
-  document.getElementById('saved-content').innerHTML = lastPost.blogContent;
-};
+  const userName = document.createElement('h4');
+  userName.textContent = `Published by: ${post.userName}`;
+  userName.setAttribute('data-index', i);
+
+  const title = document.createElement('h5');
+  title.textContent = `${post.blogTitle}`;
+  title.setAttribute('data-index', i);
+
+  const content = document.createElement('p');
+  content.textContent = `${post.blogContent}`;
+  content.setAttribute('data-index', i);
+
+
+  blogPost.appendChild(title);
+  blogPost.appendChild(content);
+  blogPost.appendChild(userName);
+  
+  postList.appendChild(blogPost);
+}
+
+
+// if(lastPost !== null) {
+//   document.getElementById('saved-name').innerHTML = lastPost.userName;
+//   document.getElementById('saved-title').innerHTML = lastPost.blogTitle;
+//   document.getElementById('saved-content').innerHTML = lastPost.blogContent;
+// };
 
 
 
@@ -51,23 +76,17 @@ function init() {
 
 
 
-submitButton.addEventListener('click', function(event){
-  event.preventDefault();
-  const postText= postInput.value.trim();
+// submitButton.addEventListener('click', function(event){
+//   event.preventDefault();
+//   const element= event.target;
 
-  if (postText === '') {
-    return; 
-  }
-  const currentPost = {
-    userName: userName.value.trim(),
-    blogTitle: blogTitle.value.trim(),
-    blogContent: postText,
-  }
-  blogPosts.push(currentPost);
-  storePosts();
-  postInput.value = '';
+//   if (element.matches('button') ===true) {
+//     const index = element.parentElement.getAttribute('data-index');
+//     blogPosts.splice(index, 1);
 
-  renderPosts();
-})
+//   storePosts();
+//   renderPosts();
+//   }}
+// )
 
 init();
