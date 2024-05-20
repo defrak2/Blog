@@ -29,17 +29,20 @@ for(let i = 0; i < blogPosts.length; i++) {
   blogPost.textContent = '';
   blogPost.setAttribute('data-index', i);
 
-  const userName = document.createElement('h4');
+  const userName = document.createElement('h7');
   userName.textContent = `Published by: ${post.userName}`;
   userName.setAttribute('data-index', i);
+  userName.classList.add('user-name')
 
-  const title = document.createElement('h5');
+  const title = document.createElement('h3');
   title.textContent = `${post.blogTitle}`;
   title.setAttribute('data-index', i);
+  title.classList.add('title');
 
   const content = document.createElement('p');
   content.textContent = `${post.blogContent}`;
   content.setAttribute('data-index', i);
+  content.classList.add('content');
 
 
   blogPost.appendChild(title);
@@ -58,12 +61,12 @@ for(let i = 0; i < blogPosts.length; i++) {
 
 
 
-  blogPosts.forEach((post, index) => {
-    const li = document.createElement('li');
-    li.textContent= `${post.userName}: ${post.blogTitle} ${post.blogContent}`
-    li.setAttribute('data-index', index);
-    postList.appendChild(li);
-  })
+  // blogPosts.forEach((post, index) => {
+  //   const li = document.createElement('li');
+  //   li.textContent= `${post.userName}: ${post.blogTitle} ${post.blogContent}`
+  //   li.setAttribute('data-index', index);
+  //   postList.appendChild(li);
+  // })
 };
 
 function init() {

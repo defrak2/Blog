@@ -21,4 +21,37 @@ img {
   width: 100%;
 }
 
+
+/*Styles for the blog entry page*/
+main-blog {
+  display: flex;
+  flex-direction: rows;
+}
+div {
+  width: 100%;
+  padding: 1rem;
+  border: black 2px solid;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.title {
+  font-size: 120%;
+
+  border-bottom: black 2px solid;
+  
+}
+
+.content {
+  font-size: 100%;
+  padding-top: .5rem;
+  padding-bottom: 2rem;
+  text-indent: 1rem;
+}
+.user-name {
+  font-size: 70%;
+  padding-bottom: .5rem;
+}
+
+
 /* Styles for the footer */
+
