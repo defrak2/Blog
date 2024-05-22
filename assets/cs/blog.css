@@ -24,7 +24,7 @@ h1 {
 #emoji-button {
   background-color: transparent;
   border: none;
-  opacity: 60%;
+
 }
 .main-form {
   display: flex;
@@ -86,6 +86,9 @@ footer ul li {
 
 
 /*Styles for the blog entry page*/
+p {
+padding-bottom: 1.5rem;
+}
 main-blog {
   display: flex;
   flex-direction: rows;
@@ -99,9 +102,7 @@ main-blog {
 }
 .title {
   font-size: 120%;
-
   border-bottom: black 2px solid;
-  
 }
 
 .content {
@@ -129,5 +130,6 @@ Styles for the pseudoclasses/elements */
 
 #emoji-button:hover {
   cursor: pointer;
-  opacity: 100%;
+  filter: brightness(1.5);
+  text-shadow: 5px 5px 10px;
 }
