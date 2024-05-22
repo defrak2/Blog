@@ -25,11 +25,13 @@ for(let i = 0; i < blogPosts.length; i++) {
   const blogPost = document.createElement('div');
   blogPost.textContent = '';
   blogPost.setAttribute('data-index', i);
+  blogPost.setAttribute('data-mode', "light");
+  blogPost.classList.add('blog-post');
 
   const userName = document.createElement('h7');
   userName.textContent = `Published by: ${post.userName}`;
   userName.setAttribute('data-index', i);
-  userName.classList.add('user-name')
+  userName.classList.add('user-name');
 
   const title = document.createElement('h3');
   title.textContent = `${post.blogTitle}`;

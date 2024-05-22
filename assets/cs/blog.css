@@ -2,9 +2,13 @@
 body {
   margin: 3rem;
   padding: 1rem;
-  border: black 2px solid;
   border-radius: 10px;
   width: 92%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
 }
 header {
   height: 4rem;
@@ -12,6 +16,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   padding-bottom: 1rem;
+
 }
 h1 {
   display: flex;
@@ -24,7 +29,13 @@ h1 {
 #emoji-button {
   background-color: transparent;
   border: none;
+  padding: .5rem;
 
+}
+#back-button {
+  padding: .5rem;
+  border-radius: .5rem;
+  margin-right: 1rem;
 }
 .main-form {
   display: flex;
@@ -32,7 +43,6 @@ h1 {
   flex-direction: row;
 }
 #form-container {
-  border-left: black 2px solid;
   margin: 3px;
   padding: 3px;
 }
@@ -41,13 +51,11 @@ h1 {
 /* Styles for the image*/
 .container {
   margin-top: 10px;
-  border-top: black 2px double;
   width: 50%;
   display: flex;
   height: 30rem;
 }
 #img-container {
-  border-right: black 2px solid;
   margin: 3px;
   padding: 3px;
   position: relative;
@@ -67,10 +75,13 @@ h5 {
 
 /*Styles for footer*/
 footer {
-  padding: 10px;
+  padding-bottom: 10px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
 }
 h4 {
   display: flex;
@@ -78,10 +89,15 @@ h4 {
   padding: 5px;
 }
 footer ul {
-  padding: 5px;
+  padding-bottom: 5px;
 }
 footer ul li {
-  padding: 5px;
+  padding-bottom: 10px;
+}
+
+a {
+  color:antiquewhite;
+  text-shadow: 5px 5px 5px rgba(45, 54, 51, 0.726);
 }
 
 
@@ -96,13 +112,13 @@ main-blog {
 #posts div {
   width: 100%;
   padding: 1rem;
-  border: black 2px solid;
+  background-color: rgb(109, 145, 133);
   border-radius: 8px;
   margin-bottom: 1rem;
 }
 .title {
   font-size: 120%;
-  border-bottom: black 2px solid;
+  border-bottom: rgb(45, 54, 51) 2px solid;
 }
 
 .content {
@@ -122,8 +138,10 @@ main-blog {
     display: block;
 }
 
-/* Styles for the footer */
 
+a {
+  text-decoration: none;
+}
 
 /* 
 Styles for the pseudoclasses/elements */
@@ -131,5 +149,5 @@ Styles for the pseudoclasses/elements */
 #emoji-button:hover {
   cursor: pointer;
   filter: brightness(1.5);
-  text-shadow: 5px 5px 10px;
+  text-shadow: -2px -2px 2px antiquewhite;
 }

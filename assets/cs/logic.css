@@ -1,16 +1,46 @@
 
 
 /* Light Mode */
+
+
 body[data-mode="light"] {
-  background-color: antiquewhite;
-  color: black;
+  background-color: rgb(168, 195, 202);
+  color:rgb(66, 70, 83);
+  border: rgb(66, 70, 83) 2px solid;
 }
+
+
+a[data-mode="light"] {
+  text-decoration: none;
+  color:antiquewhite;
+}
+
+header[data-mode="light"]{
+  border-bottom: rgb(66, 70, 83) 6px double;
+}
+#posts div[data-mode="light"] {
+  border: rgb(66, 70, 83) 2px solid;
+}
+
+
 
 /* Dark Mode */
 
-body[data-mode="dark"] {
-  background-color: darkolivegreen;
-  color: white;
-}
 
+body[data-mode="dark"] {
+  background-color: rgb(66, 70, 83);
+  color: antiquewhite;
+  border: antiquewhite 2px solid;
+}
+/* 
+div[data-mode="dark"] {
+  background-color: rgb(96, 100, 116);
+} */
+
+header[data-mode="dark"]{
+  border-bottom: antiquewhite 6px double;
+}
+#posts div[data-mode="dark"] {
+  border: antiquewhite 2px solid;
+}
 
