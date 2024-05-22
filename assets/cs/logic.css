@@ -1,19 +1,16 @@
-/* Default style of page */
 
-body {
-  background-color: antiquewhite;
-  color: black;
-}
+
 /* Light Mode */
-
-.light {
+body[data-mode="light"] {
   background-color: antiquewhite;
   color: black;
 }
 
 /* Dark Mode */
-.dark {
+
+body[data-mode="dark"] {
   background-color: darkolivegreen;
   color: white;
 }
-  
+
+

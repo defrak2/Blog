@@ -1,24 +1,87 @@
 /* styles for the header bar and basic aligning of the page*/
-
-header {
+body {
+  margin: 3rem;
+  padding: 1rem;
   border: black 2px solid;
+  border-radius: 10px;
+  width: 92%;
 }
-
-.main {
-  border: black 2px solid;
+header {
+  height: 4rem;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+h1 {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  font-size: 160%;
 
+}
+#emoji-button {
+  background-color: transparent;
+  border: none;
+  opacity: 60%;
+}
+.main-form {
+  display: flex;
+  padding: 7px;
   flex-direction: row;
 }
+#form-container {
+  border-left: black 2px solid;
+  margin: 3px;
+  padding: 3px;
+}
+
 
 /* Styles for the image*/
 .container {
-  border: black 2px solid;
+  margin-top: 10px;
+  border-top: black 2px double;
   width: 50%;
   display: flex;
+  height: 30rem;
 }
+#img-container {
+  border-right: black 2px solid;
+  margin: 3px;
+  padding: 3px;
+  position: relative;
+  
+}
+
 img {
   width: 100%;
+  object-fit: contain;
+}
+h5 {
+  position: absolute;
+  bottom: 45%;
+  left: 32%;
+  font-size: 200%;
+}
+
+/*Styles for footer*/
+footer {
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+h4 {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+footer ul {
+  padding: 5px;
+}
+footer ul li {
+  padding: 5px;
 }
 
 
@@ -27,7 +90,7 @@ main-blog {
   display: flex;
   flex-direction: rows;
 }
-div {
+#posts div {
   width: 100%;
   padding: 1rem;
   border: black 2px solid;
@@ -51,7 +114,20 @@ div {
   font-size: 70%;
   padding-bottom: .5rem;
 }
-
+.errorMessage {
+  display: hidden;
+}
+.errorMessage:enabled {
+    display: block;
+}
 
 /* Styles for the footer */
 
+
+/* 
+Styles for the pseudoclasses/elements */
+
+#emoji-button:hover {
+  cursor: pointer;
+  opacity: 100%;
+}

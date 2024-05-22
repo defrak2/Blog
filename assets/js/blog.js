@@ -2,9 +2,6 @@ const postCount= document.querySelector('#post-count');
 const postList= document.querySelector('#posts');
 const submitButton= document.querySelector('#submit-button');
 const postInput= document.querySelector('.post-text');
-// const userName= document.querySelector('#user-name');
-// const blogTitle= document.querySelector('#blog-title');
-// const blogContent= document.querySelector('#blog-content');
 
 let blogPosts = [];
 
@@ -52,21 +49,6 @@ for(let i = 0; i < blogPosts.length; i++) {
   postList.appendChild(blogPost);
 }
 
-
-// if(lastPost !== null) {
-//   document.getElementById('saved-name').innerHTML = lastPost.userName;
-//   document.getElementById('saved-title').innerHTML = lastPost.blogTitle;
-//   document.getElementById('saved-content').innerHTML = lastPost.blogContent;
-// };
-
-
-
-  // blogPosts.forEach((post, index) => {
-  //   const li = document.createElement('li');
-  //   li.textContent= `${post.userName}: ${post.blogTitle} ${post.blogContent}`
-  //   li.setAttribute('data-index', index);
-  //   postList.appendChild(li);
-  // })
 };
 
 function init() {
@@ -78,18 +60,13 @@ function init() {
 }
 
 
-
-// submitButton.addEventListener('click', function(event){
-//   event.preventDefault();
-//   const element= event.target;
-
-//   if (element.matches('button') ===true) {
-//     const index = element.parentElement.getAttribute('data-index');
-//     blogPosts.splice(index, 1);
-
-//   storePosts();
-//   renderPosts();
-//   }}
-// )
-
 init();
+
+//Back Button
+
+const backButton = document.getElementById('back-button');
+
+backButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  window.location.href = '../../index.html';
+})

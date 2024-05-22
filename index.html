@@ -9,18 +9,15 @@
   <link rel="stylesheet" href="./assets/cs/logic.css">
   <title>Blog</title>
 </head>
-<body>
-  THEN I am presented with the landing page containing a form with labels and 
-  inputs for username, blog title, and blog content.
+<body data-mode="light">
   <header>
-    <!-- //Enter toggle for dark/light mode// -->
-    <button id="toggle-button">
-      &#x2600; &#127769;
-    </button>
+
+    <button id="emoji-button" data-mode="light">🌙</button>
   </header>
-  <div class = "main">
-    <div class = "container">
+  <div class = "main-form">
+    <div class = "container" id = "img-container">
       <img src="./assets/images/blog-image.jpg">
+      <h5>My First Blog</h5>
     </div>
     <div class = "container" id = "form-container">
         <h2>
@@ -28,24 +25,34 @@
         </h2>      
         <form id="post-form">
               <label for="user-name">Username: 
-                <input type="text" id="user-name" class="post-text"/>
+                <input type="text" id="userName" class="post-text" required/>
               </label>
               <label for="blog-title">Blog Title: 
-                <input type="text" id="blog-title" class="post-text" />
+                <input type="text" id="blogTitle" class="post-text" required/>
               </label>
               <label for="blog-content">Blog Content: 
-                <textarea id="blog-content" id="blog-content" class="post-text"></textarea>
+                <textarea  id="blogContent" class="post-text" required></textarea>
               </label>
              <button  id="submit-button">Submit</button>
+
+             <div id="errorMessage"></div>
       </form>
 
     </div>
   
   </div>  
   <footer>
-      Kendra DeFrancisco
-      <!-- WHEN I view the footer,
-THEN I am presented with a link to the developer's portfolio. -->
+    <h4>Made with ❤️ by Kendra DeFrancisco</h4>
+    <ul>
+      <li id="portfolio">Porfolio: 
+        <a href="https://defrak2.github.io/Portfolio/">DeFranciso</a>
+      </li>
+      <li id="Blog">Blog:
+        <a href="https://defrak2.github.io/Blog/">Full Stack Blog</a>
+      </li>
+      <li id="Email">Email:<a href="mailto:defranciscok22@gmail.com">defranciscok22@gmail.com</a>
+      </li>
+    </ul>
   </footer>
   <script src="./assets/js/logic.js"></script>
     <script src="./assets/js/blog.js"></script>
